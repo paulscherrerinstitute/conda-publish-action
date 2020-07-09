@@ -17,7 +17,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: publish-to-conda
-      uses: paulscherrerinstitute/conda-publish-action@1.3
+      uses: paulscherrerinstitute/conda-publish-action@master
       with:
         subdir: 'conda-recipe'
         anacondatoken: ${{ secrets.ANACONDA_TOKEN }}
