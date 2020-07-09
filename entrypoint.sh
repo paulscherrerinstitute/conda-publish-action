@@ -24,4 +24,4 @@ conda build --output-folder . ${RECIPE_META_YAML}
 
 # upload anaconda package
 export ANACONDA_API_TOKEN=${INPUT_ANACONDATOKEN}
-anaconda upload --label main --channel paulscherrerinstitute ./noarch/*.tar.bz2
+anaconda upload --label main ./noarch/*.tar.bz2
