@@ -5,7 +5,7 @@ This is a Github-Action to build and publish conda packages.
 ### Example workflow to publish to conda every time you make a new release
 
 ```yaml
-name: conda-publish
+name: conda_publish
 
 on:
   release:
@@ -17,7 +17,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: publish-to-conda
-      uses: paulscherrerinstitute/conda-publish-action@v1.0
+      uses: paulscherrerinstitute/conda-publish-action@1.0
       with:
         subdir: 'conda-recipe'
         anacondatoken: ${{ secrets.ANACONDA_TOKEN }}
