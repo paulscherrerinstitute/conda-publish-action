@@ -1,0 +1,17 @@
+name: "conda-publish"
+description: "Build and publish Conda package to Anaconda"
+author: "paulscherrerinstitute"
+branding:
+  icon: "package"
+  color: "purple"
+inputs:
+  subdir:
+    description: "Sub-directory with conda recipe"
+    default: "conda-recipe"
+    required: true
+  anacondatoken:
+    required: true
+    description: "Anaconda access token"
+runs:
+  using: "docker"
+  image: "Dockerfile"
