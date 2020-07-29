@@ -24,4 +24,9 @@ conda build --output-folder . ${RECIPE_META_YAML}
 
 # upload anaconda package
 export ANACONDA_API_TOKEN=${INPUT_ANACONDATOKEN}
-anaconda upload --label main ./noarch/*.tar.bz2
+if test -z "$PKG_BUILD_STRING" 
+then
+      anaconda upload --label main ./noarch/*.tar.bz2 --skip
+else
+      anaconda upload "$PKG_BUILD_STRING" 
+fi
