@@ -25,4 +25,11 @@ conda build --output-folder . ${RECIPE_DIR}
 # upload anaconda package
 export ANACONDA_API_TOKEN=${INPUT_ANACONDATOKEN}
 
-anaconda upload --label main ./noarch/${INPUT_PACKAGENAME}*.tar.bz2
+
+if [ -z "${INPUT_PACKAGENAME}" ]
+then
+      anaconda upload --label main ./noarch/*.tar.bz2 
+else
+      anaconda upload --label main ./noarch/${INPUT_PACKAGENAME}*.tar.bz2
+fi
+
