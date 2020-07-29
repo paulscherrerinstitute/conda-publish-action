@@ -47,7 +47,7 @@ jobs:
 
 1. Get an Anaconda token (with read and write API access) at `anaconda.org/USERNAME/settings/access` 
 2. Add it to the Secrets of the Github repository as `ANACONDA_TOKEN`
-3. Add your package name to the variable packagename in your publish_conda.yml
+3. Add your package name to the variable packagename in your publish_conda.yml. If not defined, all packages found will be uploaded.
 
 # Acknowledgements
 Most of this code is "copied" from https://github.com/fcakyon/conda-publish-action/
