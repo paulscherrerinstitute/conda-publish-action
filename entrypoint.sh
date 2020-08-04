@@ -20,7 +20,7 @@ if [ ! -f ${RECIPE_META_YAML} ]; then
 fi
 
 # build conda package
-conda build -c paulscherrerinstitute --output-folder . ${RECIPE_META_YAML}
+conda build ${INPUT_CHANNEL_OPTS} --output-folder . ${RECIPE_META_YAML}
 
 # upload anaconda package
 export ANACONDA_API_TOKEN=${INPUT_ANACONDATOKEN}
