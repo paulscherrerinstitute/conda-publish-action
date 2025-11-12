@@ -28,8 +28,8 @@ export ANACONDA_API_TOKEN=${INPUT_ANACONDATOKEN}
 
 if [ -z "${INPUT_PACKAGENAME}" ]
 then
-      anaconda upload --label main ./noarch/*.tar.bz2 
+      anaconda upload --label main ./noarch/*.conda
 else
-      anaconda upload --label main ./noarch/${INPUT_PACKAGENAME}*.tar.bz2
+      anaconda upload --label main ./noarch/${INPUT_PACKAGENAME}*.conda
 fi
 
