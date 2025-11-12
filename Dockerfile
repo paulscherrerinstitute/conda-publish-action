@@ -15,7 +15,7 @@ RUN conda --version
 LABEL "repository"="https://github.com/paulscherrerinstitute/conda-publish-action"
 LABEL "maintainer"="paulscherrerinstitute"
 
-RUN conda install -y anaconda-client conda-build conda-verify
+RUN conda install -y anaconda-client conda-build conda-verify python=3.11
 
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
