@@ -1,15 +1,15 @@
 FROM ubuntu:22.04
-ENV PATH="/root/miniconda3/bin:${PATH}"
-ARG PATH="/root/miniconda3/bin:${PATH}"
+ENV PATH="/root/miniforge3/bin:${PATH}"
+ARG PATH="/root/miniforge3/bin:${PATH}"
 RUN apt-get update
 RUN apt-get install -y wget && rm -rf /var/lib/apt/lists/*
 
-# install miniconda
+# install miniforge
 RUN wget \
-    https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh \
+    https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh \
     && mkdir /root/.conda \
-    && bash Miniconda3-latest-Linux-x86_64.sh -b \
-    && rm -f Miniconda3-latest-Linux-x86_64.sh \
+    && bash Miniforge3-Linux-x86_64.sh -b \
+    && rm -f Miniforge3-Linux-x86_64.sh \
 RUN conda --version
 
 LABEL "repository"="https://github.com/paulscherrerinstitute/conda-publish-action"
