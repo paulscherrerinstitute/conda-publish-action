@@ -12,6 +12,13 @@ inputs:
   anacondatoken:
     description: "Anaconda access token"
     required: true
+  channel_opts:
+    description: "Channel options"
+    required: true
+    default: ""
+  packagename:
+    description: "Package name"
+    required: false
 runs:
   using: "docker"
   image: "Dockerfile"
