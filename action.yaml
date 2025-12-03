@@ -7,11 +7,11 @@ branding:
 inputs:
   subdir:
     description: "Sub-directory with conda recipe"
+    required: true
     default: "conda-recipe"
-    required: true
   anacondatoken:
-    required: true
     description: "Anaconda access token"
+    required: true
 runs:
   using: "docker"
   image: "Dockerfile"
